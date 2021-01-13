@@ -17,4 +17,9 @@ public class FilmRepoImpl implements FilmRepo {
     public List<Film> findAll() {
         return jdbcTemplate.query("SELECT * FROM film", new BeanPropertyRowMapper<>(Film.class));
     }
+
+    @Override
+    public List<Film> findAvailable() {
+        return null;
+    }
 }

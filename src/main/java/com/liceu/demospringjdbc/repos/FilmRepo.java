@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface FilmRepo {
     List<Film> findAll();
+
+    List<Film> findAvailable();
 }
