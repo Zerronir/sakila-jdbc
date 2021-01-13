@@ -14,13 +14,17 @@
     <title>Hello, world!</title>
 </head>
 <body>
-<h1>Hello, world!</h1>
+<h1>Hola staff, per favor selecciona el teu usuari</h1>
 
-<ul>
-    <c:forEach var="f" items="${films}">
-        <li>${f.title}</li>
-    </c:forEach>
-</ul>
+<form action="/login" method="post">
+    <select name="staffSelector">
+        <c:forEach var="s" items="${staff}">
+            <option value="${s.email}">${s.username}</option>
+        </c:forEach>
+    </select>
+
+    <button type="submit">Entrar</button>
+</form>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -4,8 +4,21 @@ import java.util.Date;
 
 public class Staff {
     Long staffId, staffStore, addressId, status;
-    String staffName, staffLastName, email;
+    String staffName;
+    String staffLastName;
+    String email;
+    String username;
     Date last_update;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+
 
     public Long getStaffId() {
         return staffId;

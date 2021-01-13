@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="demospringjdbc" target="1.9" />
+      <module name="demospringjdbc" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

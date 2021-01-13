@@ -15,12 +15,21 @@ public class StaffController {
     @Autowired
     StaffService staffService;
 
-    @PostMapping("/staff/login")
-    public String doLogin(@RequestParam("email") String email, Model model) {
+    @PostMapping("/login")
+    public String doLogin(@RequestParam("staffSelector") String email, Model model) {
         // Recogemos la info del usuario a través del formulario
         Staff staff = staffService.getStaff(email);
-        model.addAttribute("staff", staff);
-        return "login";
+        if(staff != null) {
+            model.addAttribute("staff", email);
+            if (staff.getStaffId() > 0) {
+                return "login";
+            }
+        } else {
+            return "staffPage";
+        }
+
+        return "staffPage";
+
     }
 
 }

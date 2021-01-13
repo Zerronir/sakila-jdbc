@@ -16,9 +16,7 @@
 <body>
 <h1>Hello, world!</h1>
 
-<ul>
-    <p>Hello ${staff.name}</p>
-</ul>
+<p>Hello ${staff}</p>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

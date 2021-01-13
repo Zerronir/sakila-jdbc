@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.liceu</groupId>
-  <artifactId>demospringjdbc</artifactId>
+  <groupId>com.esliceu</groupId>
+  <artifactId>jdbc</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>demo-spring-jdbc Maven Webapp</name>
+  <name>DemoSpringJDBC Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -20,6 +20,7 @@
   </properties>
 
   <dependencies>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -52,25 +53,22 @@
     </dependency>
 
     <dependency>
-      <groupId>jstl</groupId>
+      <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.22</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jdbc -->
+
     <dependency>
       <groupId>org.springframework.data</groupId>
       <artifactId>spring-data-jdbc</artifactId>
       <version>2.1.2</version>
     </dependency>
-
-
   </dependencies>
 
   <build>
@@ -107,23 +105,25 @@
           <version>2.8.2</version>
         </plugin>
 
-        <!--<plugin>
+        <plugin>
           <groupId>org.codehaus.cargo</groupId>
           <artifactId>cargo-maven2-plugin</artifactId>
           <version>1.5.0</version>
           <configuration>
             <container>
+              <!-- FIXME change it to the Tomcat route-->
               <containerId>tomcat7x</containerId>
               <type>installed</type>
-              <home>C:\Program Files\Apache Software Foundation\Tomcat 9.0\</home>
+              <home>C:\Program Files\Apache Software Foundation\Tomcat 9.0</home>
             </container>
             <configuration>
               <type>existing</type>
-              <home>C:\Program Files\Apache Software Foundation\Tomcat 9.0\</home>
+              <home>C:\Program Files\Apache Software Foundation\Tomcat 9.0</home>
             </configuration>
           </configuration>
-        </plugin> -->
+        </plugin>
 
+        <!--
         <plugin>
           <groupId>org.codehaus.cargo</groupId>
           <artifactId>cargo-maven2-plugin</artifactId>
@@ -140,8 +140,19 @@
             </configuration>
           </configuration>
         </plugin>
+        -->
 
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
