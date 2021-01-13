@@ -1,10 +1,11 @@
 package com.liceu.demospringjdbc.repos;
 
+import com.liceu.demospringjdbc.entities.Staff;
 import org.springframework.stereotype.Repository;
 
-@Repository
+
 public interface StaffRepo {
 
-
+    Staff staffInfo(String email);
 
 }

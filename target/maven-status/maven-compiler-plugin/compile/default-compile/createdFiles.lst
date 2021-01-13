@@ -1,8 +1,14 @@
+com/liceu/demospringjdbc/repos/StaffRepoImpl.class
+com/liceu/demospringjdbc/controllers/StaffController.class
+com/liceu/demospringjdbc/services/StaffService.class
+com/liceu/demospringjdbc/services/FilmService.class
+com/liceu/demospringjdbc/controllers/RentalController.class
+com/liceu/demospringjdbc/entities/Staff.class
 com/liceu/demospringjdbc/entities/Film.class
 com/liceu/demospringjdbc/repos/FilmRepo.class
+com/liceu/demospringjdbc/repos/StaffRepo.class
 com/liceu/demospringjdbc/config/AppConfig.class
-com/liceu/demospringjdbc/services/FilmService.class
 com/liceu/demospringjdbc/config/AnnotationWebAppInitializer.class
-com/liceu/demospringjdbc/controllers/RentalController.class
 com/liceu/demospringjdbc/repos/FilmRepoImpl.class
 com/liceu/demospringjdbc/config/ConfigJDBC.class
+com/liceu/demospringjdbc/entities/Customer.class
