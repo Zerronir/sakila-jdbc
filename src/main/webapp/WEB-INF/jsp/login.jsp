@@ -4,9 +4,14 @@
 <!doctype html>
 <html lang="en">
 <!-- HEAD -->
-    <%@ include file="partials/header.jsp" %>
+    <%@ include file="./partials/head.jsp" %>
 <!-- HEAD -->
 <body>
+
+<!-- HEADER -->
+<%@ include file="./partials/header.jsp"%>
+<!-- HEADER -->
+
 <h1>Hello, world!</h1>
 
 <p>Hello ${staff}</p>
