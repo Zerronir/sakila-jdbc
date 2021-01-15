@@ -18,13 +18,11 @@ public class RentalController {
     @Autowired
     FilmService filmService;
 
-    @Autowired
-    StaffService staffService;
-
     @GetMapping("/rental")
     public String rental(Model model) {
-        List<Staff> allStaff = staffService.getAllStaff();
-        if(allStaff != null) model.addAttribute("staff", allStaff);
+        List<Film> films = filmService.findAll();
+        System.out.println(films);
+        if(films != null) model.addAttribute("films", films);
         return "rental";
     }
 
